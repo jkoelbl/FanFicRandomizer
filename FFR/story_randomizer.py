@@ -20,5 +20,3 @@ def get_random_story():
 	filenames = get_filenames()
 	index = randint(0,len(filenames)-1)
 	read_file(filenames[index])
-
-get_random_story()
