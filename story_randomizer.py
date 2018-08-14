@@ -7,7 +7,10 @@ def get_filenames():
 
 def read_file(filename):
 	with open(filename) as file:
-		print(file.read())
+		temp = file.read(256)
+		while temp:
+			print(temp, end='')
+			temp = file.read(256)
 
 def get_random_story():
 	filenames = get_filenames()
