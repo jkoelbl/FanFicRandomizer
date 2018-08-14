@@ -1,5 +1,5 @@
+from os import listdir
 from random import randint
-from os import listdir, getcwd
 
 def get_filenames():
 	mypath = getcwd() + '\\stories'
