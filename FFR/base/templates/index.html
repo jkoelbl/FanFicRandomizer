@@ -2,11 +2,16 @@
 <html>
 	<head>
 		<title>Fan Fiction Randomizer</title>
+		<script>
+		$("#randomize").click(function() {
+			$.get("/stories/", function(data){
+				$("#output").html(data);
+			}, "html");
+		});
+		</script>
 	</head>
 	<body>
-		<button script="story_randomizer.py">Get Random Story</button>
-		<br>
-		<br>
-		<div>{{story}}</div>
+		<button id="randomize" type="button">Get Random Story</button>
+		<div id="output"></div>
 	</body>
 </html>
