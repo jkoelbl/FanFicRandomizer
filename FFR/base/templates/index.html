@@ -3,15 +3,11 @@
 	<head>
 		<title>Fan Fiction Randomizer</title>
 		<script>
-		$("#randomize").click(function() {
-			$.get("/stories/", function(data){
-				$("#output").html(data);
-			}, "html");
-		});
+		<!--> ajax call to get_random_story through button press
 		</script>
 	</head>
 	<body>
 		<button id="randomize" type="button">Get Random Story</button>
-		<div id="output"></div>
+		<div id="output">{{ output }}</div>
 	</body>
 </html>

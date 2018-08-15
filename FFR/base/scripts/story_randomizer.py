@@ -1,4 +1,4 @@
-from os import listdir
+from os import listdir, getcwd
 from random import randint
 
 mypath = getcwd() + '\\stories'

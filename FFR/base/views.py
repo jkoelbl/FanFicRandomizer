@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import randomize
+from .scripts import *
 
 # Create your views here.
 def index(response):
@@ -7,6 +7,6 @@ def index(response):
 
 def output(request):
 	if request.is_ajax():
-		filename = randomize()
+		filename = get_random_story()
 		with open('stories\\' + filename) as file:
-			return render(request, 'output.html', {'output': file.read()})
+			return render(request, 'index.html', {'output': file.read()})

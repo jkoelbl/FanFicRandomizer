@@ -1,1 +1,1 @@
-from story_randomizer import get_random_story as randomize
+from .story_randomizer import get_random_story
