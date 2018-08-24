@@ -3,5 +3,7 @@ from .scripts import *
 
 # Create your views here.
 def index(response):
-	return render(response, 'index.html', \
-		{'output': get_random_story()})
+	output = {
+	'output': get_random_story()\
+	}
+	return render(response, 'index.html', output)
