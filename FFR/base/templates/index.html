@@ -2,12 +2,13 @@
 <html>
 	<head>
 		<title>Fan Fiction Randomizer</title>
-		<script>
-		<!--> ajax call to get_random_story through button press
-		</script>
 	</head>
 	<body>
-		<button id="randomize" type="button">Get Random Story</button>
-		<div id="output">{{ output }}</div>
+		<button onclick="refresh()">Randomize</button>	<br><br>
+		<script>
+			function refresh(){ document.location.reload(); }
+		</script>
+		
+		<div id="output">{{output}}</div>
 	</body>
 </html>
